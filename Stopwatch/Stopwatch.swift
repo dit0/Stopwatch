@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Stopwatch{
     
     private var startTime: Date?
@@ -21,9 +20,6 @@ class Stopwatch{
             return 0
         }
     }
-    
-    
-    
     
     var isRunning: Bool {
         return startTime != nil
