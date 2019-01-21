@@ -5,7 +5,6 @@
 //  Created by Diego Rodrigues de Oliveira on 1/14/19.
 //  Copyright © 2019 Langara. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -26,12 +25,10 @@ class ViewController: UIViewController {
         resumeButton.isHidden = true;
         stopButton.isEnabled = false
         resetButton.isEnabled = false
-        
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        
-        print("start")
+//        print("start")
         stopwatch.start()
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
         
@@ -43,38 +40,32 @@ class ViewController: UIViewController {
         
     }
     @IBAction func stopButtonTapped(_ sender: UIButton) {
-        print("stop")
-        //        timer?.invalidate()
+//        print("stop")
         stopwatch.stop()
         resumeButton.isHidden = false
         startButton.isHidden = true
         resumeButton.isEnabled = true
         stopButton.isEnabled = false
-
+        
     }
     
     @IBAction func resumeButtonTapped(_ sender: UIButton) {
-        print("resume")
+//        print("resume")
         stopwatch.resume()
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateElapsedTimeLabel(timer:)), userInfo: nil, repeats: true)
         resumeButton.isEnabled = false
         stopButton.isEnabled = true
-
-        
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         stopwatch.reset()
-        print("reset")
+//        print("reset")
         elapsedTimeLabel.text = "00:00:0"
         startButton.isEnabled = true
         startButton.isHidden = false
         resumeButton.isHidden = true
         resetButton.isEnabled = false
         stopButton.isEnabled = false
-        
-        
-        
     }
     
     @objc func updateElapsedTimeLabel(timer: Timer){
