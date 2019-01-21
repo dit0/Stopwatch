@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOR-VP-HI3">
+                                <rect key="frame" x="16" y="70" width="343" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-D2-jG3">
+                                <rect key="frame" x="16" y="617" width="55" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2j-G9-HS5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-Hi-LwA">
+                                <rect key="frame" x="327" y="617" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WB5-dA-4cC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6z-A0-K00">
+                                <rect key="frame" x="168" y="617" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FA-pi-peE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-JC-5dc">
+                                <rect key="frame" x="16" y="617" width="55" height="30"/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resumeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kq7-js-4gP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iKo-Hi-LwA" secondAttribute="trailing" constant="16" id="2Va-cl-8of"/>
+                            <constraint firstItem="v6z-A0-K00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2WK-Zd-ixh"/>
+                            <constraint firstItem="iKo-Hi-LwA" firstAttribute="centerY" secondItem="Fm9-D2-jG3" secondAttribute="centerY" id="8j4-iI-y9t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OW1-JC-5dc" secondAttribute="bottom" constant="20" id="9hc-Zy-U37"/>
+                            <constraint firstItem="TOR-VP-HI3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="9pa-B5-Tvr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v6z-A0-K00" secondAttribute="bottom" constant="20" id="BCm-pQ-DPo"/>
+                            <constraint firstItem="Fm9-D2-jG3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Edk-0I-Na3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OW1-JC-5dc" secondAttribute="bottom" constant="20" id="GZL-Hd-Tfx"/>
+                            <constraint firstItem="OW1-JC-5dc" firstAttribute="centerX" secondItem="Fm9-D2-jG3" secondAttribute="centerX" id="NyV-e2-Djc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OW1-JC-5dc" secondAttribute="bottom" constant="20" id="PtZ-Go-jvt"/>
+                            <constraint firstItem="OW1-JC-5dc" firstAttribute="leading" secondItem="Fm9-D2-jG3" secondAttribute="leading" id="W1y-Wp-O4L"/>
+                            <constraint firstItem="OW1-JC-5dc" firstAttribute="centerY" secondItem="Fm9-D2-jG3" secondAttribute="centerY" id="X9y-dh-nnk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fm9-D2-jG3" secondAttribute="bottom" constant="20" id="Zi3-zt-sw6"/>
+                            <constraint firstItem="OW1-JC-5dc" firstAttribute="centerY" secondItem="Fm9-D2-jG3" secondAttribute="centerY" id="ddN-yz-YsD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TOR-VP-HI3" secondAttribute="trailing" constant="16" id="lOh-Tr-Jo4"/>
+                            <constraint firstItem="TOR-VP-HI3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sZp-1w-evP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="elapsedTimeLabel" destination="TOR-VP-HI3" id="VIq-Jl-0AA"/>
+                        <outlet property="resetButton" destination="v6z-A0-K00" id="vSZ-sG-05y"/>
+                        <outlet property="resumeButton" destination="OW1-JC-5dc" id="6vo-NF-7Xs"/>
+                        <outlet property="startButton" destination="Fm9-D2-jG3" id="swW-sW-gKe"/>
+                        <outlet property="stopButton" destination="iKo-Hi-LwA" id="cxy-qW-ZLQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
