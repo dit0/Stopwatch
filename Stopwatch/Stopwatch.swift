@@ -5,7 +5,6 @@
 //  Created by Diego Rodrigues de Oliveira on 1/14/19.
 //  Copyright © 2019 Langara. All rights reserved.
 //
-
 import Foundation
 
 class Stopwatch{
@@ -27,8 +26,6 @@ class Stopwatch{
     
     func start(){
         startTime = Date()
-      
-        
     }
     func stop(){
         
@@ -36,9 +33,7 @@ class Stopwatch{
         startTime = nil
     }
     func resume(){
-        
-        
-         print(currentTime)
+        print(currentTime)
         startTime = Date()
         
     }
